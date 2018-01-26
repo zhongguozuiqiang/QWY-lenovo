@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+}
+img{
+	cursor: pointer;
+}
+.banner{
+	position: relative;
+	top: 0;
+}
+.banner img{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+.banner .banner_sp{
+	width: 22rem;
+	height: 1rem;
+	position: absolute;
+	bottom: 1rem;
+	left: 45%;
+	z-index: 2;
+}
+.banner .banner_sp span{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	background: #535353;
+	margin-left: 1rem;
+	cursor: pointer;
+}
+.banner .banner_sp1{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	width: 4rem;
+	height: 6rem;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	font: 3.4rem/6rem "微软雅黑";
+	text-align: center;
+	top: 45%;
+	cursor: pointer;
+}
+.banner .banner_sp2{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	width: 4rem;
+	height: 6rem;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	font: 3.4rem/6rem "微软雅黑";
+	text-align: center;
+	top: 45%;
+	cursor: pointer;
+}
+
+
+
+
+.mingxingdanping{
+	position: relative;
+	top: 0;
+	width: 1200px;
+	height: 950px;
+	margin: 0 auto;
+}
+.mingxingdanping p{
+	padding-top: 4rem;
+}
+.mingxingdanping span{
+	text-align: right;
+	margin-left: 1rem;
+	font: 1.2rem/2rem "微软雅黑";
+	color: #b6b6b6;
+	cursor: pointer;
+	float: right;
+	margin-top: 2rem;
+}
+#mingxingdanping{
+	cursor: text;
+	font: 4.4rem/5rem "微软雅黑";
+	color: #404040;
+	float: none;
+}
+.mingxingdanping .mx_max{
+	width: 584px;
+	height: 780px;
+	position: absolute;
+	top: 140px;
+	left: 0;
+	overflow: hidden;
+}
+.mingxingdanping .mx_min_1{
+	width: 300px;
+	height: 386px;
+	position: absolute;
+	top: 140px;
+	left: 592px;
+	overflow: hidden;
+}
+.mingxingdanping .mx_min_2{
+	width: 300px;
+	height: 386px;
+	position: absolute;
+	top: 140px;
+	right: 0;
+	overflow: hidden;
+}
+.mingxingdanping .mx_min_3{
+	width: 300px;
+	height: 386px;
+	position: absolute;
+	top: 534px;
+	left: 592px;
+	overflow: hidden;
+}
+.mingxingdanping .mx_min_4{
+	width: 300px;
+	height: 386px;
+	position: absolute;
+	top: 534px;
+	right: 0;
+	overflow: hidden;
+}
+
+.mx_min_1 img,.mx_min_2 img,.mx_min_3 img,.mx_min_4 img{
+	transition: 300ms;
+}
+.mx_min_1 img:hover,.mx_min_2 img:hover,.mx_min_3 img:hover,.mx_min_4 img:hover{
+	margin-top: -5px;
+}
+.mx_tab{
+	display: none;
+}
