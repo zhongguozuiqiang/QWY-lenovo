@@ -1,0 +1,246 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #f5f5f5;
+}
+nav{
+	width: 100%;
+	background: #444444;
+	position: relative;
+	top: 0;
+}
+header{
+	width: 100%;
+	background: #333333;
+	position: relative;
+	top: 0;
+	height: 4rem;
+	z-index: 3;
+}
+nav .nav_up,header .nav_down{
+	width: 1200px;
+	margin: 0 auto;
+}
+nav a{
+	font: 1rem/3rem "微软雅黑";
+	margin-left: 1rem;
+	color: #d0cbcf;
+}
+header a{
+	font: 1.6rem/4rem "微软雅黑";
+	margin-left: 2rem;
+	color: #fff;
+}
+header a:nth-of-type(1){
+	margin-left: 0;
+}
+nav a:nth-of-type(1){
+	margin-left: 0;
+}
+header img{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+header input{
+	width: 20rem;
+	height: 2.8rem;
+	border-radius: 1.5rem;
+	background: #444444;
+	border: none;
+	position: absolute;
+	top: 0.6rem;
+	left: 59%;
+	outline: none;
+	color: #fff;
+	padding: 0 1rem;
+}
+header span:nth-of-type(1){
+	display: inline-block;
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: 1.2rem;
+	background: #fff;
+	color: #333333;
+	text-align: center;
+	position: absolute;
+	left: 71.1%;
+	top: 0.8rem;
+	font: 1.4rem/2.4rem "微软雅黑";
+}
+header span:nth-of-type(2){
+	color: #fff;
+	position: absolute;
+	right: 24%;
+	top: 0.8rem;
+	font: 2rem/2.4rem "微软雅黑";
+}
+header span:nth-of-type(3){
+	color: #fff;
+	position: absolute;
+	right: 21%;
+	top: 0.8rem;
+	font: 2rem/2.4rem "微软雅黑";
+}
+#yuan{
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 0.8rem;
+	background: red;
+	position: absolute;
+	top: 0.6rem;
+	right: 19.8%;
+	text-align: center;
+	color: #fff;
+	font: 1rem/1.6rem "微软雅黑";
+}
+header ul{
+	width: 36rem;
+	height: 30rem;
+	background: #fff;
+	position: absolute;
+	top: 4rem;
+	left: 59%;
+	overflow: hidden;
+	z-index: 2;
+}
+header ul li{
+	list-style: none;
+}
+.banner{
+	margin: 0 auto;
+	width: 1580px;
+	height: 494px;
+	position: relative;
+	top: 0;
+	overflow: hidden;
+}
+.banner .banner_img_view{
+	width: 1580px;
+	position: absolute;
+	left: 0;
+}
+.banner .banner_img_move{
+	width: 1580px;
+	position: absolute;
+	left: 2000px;
+	top: 0;
+}
+.content_tab{
+	width: 1200px;
+	height: 5rem;
+	background: rgba(0,0,0,0.5);
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -5rem;
+}
+.content_tab span{
+	display: inline-block;
+	font: 2rem/5rem "微软雅黑";
+	color: #D0CBCF;
+	margin: 0 6.4rem;
+	cursor: pointer;
+}
+.content_tab span:hover{
+	color: #fff;
+}
+.xiaoxin_bijiben{
+	position: relative;
+	top: -4rem;
+	width: 1200px;
+	height: 1300px;
+	margin: 0 auto;
+}
+.xiaoxin_bijiben p{
+	font: 2.6rem/6rem "微软雅黑";
+}
+.xiaoxin_bijiben div{
+	margin-top: 1.2rem;
+	float: left;
+}
+.xiaoxin_bijiben div img{
+	width: 592px;
+}
+.xiaoxin_bijiben .pass{
+	margin-left: 1.2rem;
+}
+.xiaoxin_zhoubian{
+	position: relative;
+	top: -4rem;
+	width: 1200px;
+	height: 1700px;
+	margin: 0 auto;
+}
+.xiaoxin_zhoubian p{
+	font: 2.6rem/6rem "微软雅黑";
+}
+.xiaoxin_zhoubian div{
+	margin-top: 1.2rem;
+	float: left;
+	width: 389px;
+	height: 389px;
+}
+.xiaoxin_zhoubian .zhoubian_img{
+	margin-left: 1.2rem;
+}
+.xiaoxin_fuwu{
+	position: relative;
+	top: -4rem;
+	width: 1200px;
+	height: 1700px;
+	margin: 0 auto;
+}
+.xiaoxin_fuwu p{
+	font: 2.6rem/6rem "微软雅黑";
+}
+.xiaoxin_fuwu div{
+	margin-top: 1.2rem;
+	float: left;
+	width: 388px;
+	height: 388px;
+}
+.xiaoxin_bijiben div p,.xiaoxin_zhoubian div p,.xiaoxin_fuwu div p{
+	margin-left: 3rem;
+	font: 2.4rem/3rem "微软雅黑";
+}
+.tab_hollow span{
+	margin-left: 3rem;
+	font: 2.2rem/3rem "微软雅黑";
+	color: red;
+}
+.tab_hollow .sp_w{
+	font: 1.2rem/2rem "微软雅黑";
+	color: #83837b;
+}
+.xiaoxin_fuwu div img,.xiaoxin_zhoubian div img{
+	margin: 1rem 6rem;
+}
+.xiaoxin_fuwu div,.xiaoxin_zhoubian div{
+	background: #fff;
+}
+.xiaoxin_fuwu .fuwu_img{
+	margin-left: 1.4rem;
+}
+.xiaoxin_bijiben div,.xiaoxin_zhoubian div,.xiaoxin_fuwu div{
+	transition: 500ms;
+}
+.xiaoxin_bijiben div:hover,.xiaoxin_zhoubian div:hover,.xiaoxin_fuwu div:hover{
+	box-shadow: 5px 5px 40px 1px #999;
+}
+.tab_hollow div:nth-of-type(1):hover{
+	box-shadow:none;
+}
+#guanggao{
+	position: fixed;
+	bottom: 5rem;
+	right: 12rem;
+}
