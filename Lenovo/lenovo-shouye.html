@@ -7,8 +7,1399 @@
 		<script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
 		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/lenovo_shouye.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<style>
+		    *{
+		    	margin: 0; padding: 0;
+		    }
+			header{
+				width: 100%; height: 70px;
+				background: transparent;
+				position: fixed;
+				z-index: 4;
+			}
+			#head{
+				width: 1200px; height: 70px;
+				margin: 0 auto;
+				position: relative;
+				background: transparent;
+			}
+			#head ul{
+				list-style: none;
+				position: absolute;
+				line-height: 70px;
+				top: 0; left: -24px;
+			}
+			#head ul li{
+				float: left;
+				color: #333;
+				font-size: 14px;
+				margin-left: 24px;
+			}
+			#head ul li a{
+				text-decoration: none;
+				color: #333;
+			}
+			#head ul li img{
+				height: 14px;
+			}
+			#head-txtone{
+				position: absolute;
+				left: 676px; top: 17px;
+				width: 270px; height: 36px;
+				border: 1px solid #999;
+				border-radius: 18px;
+				color: #999;
+				outline: none;
+				text-align: center;
+			}
+			#head-cir{
+				position: absolute;
+				width: 30px; height: 30px;
+				border: 1px solid white;
+				background: white;
+				left: 910px; top: 20px;
+				border-radius: 16px;
+			}
+			#head-cir img{
+				width: 24px;
+				margin-left: 4px;
+				margin-top: 4px;
+			}
+			#head-main{
+				position: absolute;
+				left: 1070px; top: 24px;
+				display: block;
+			}
+			#head-main img{
+				height: 22px;
+				margin-left: 20px;
+			}
+			#head-main--1{
+				display: none;
+				position: absolute;
+				left: 1070px; top: 24px;
+			}
+			#head-main--1 img{
+				height: 22px;
+				margin-left: 20px;
+			}
+			#head-sup{
+				width: 20px; height: 20px;
+				border: 1px solid red;
+				border-radius: 10px;
+				background: red;
+				opacity: 0.7;
+				position: absolute;
+				right: 16px; top: 14px;
+				text-align: center;
+				outline: none;
+			}
+			#header-logo{
+				position: absolute;
+				top: 0;
+				display: block;
+			}
+			#header-logo1{
+				position: absolute;
+				top: 0;
+				display: none;
+			}
+			
+			
+			#erji{
+				height: 456px; width: 100%;
+				border: 1px solid #bfbfbf;
+				background: white;
+				display: none;
+				position: absolute;
+				top: 70px;
+				z-index: 3;
+			}
+			#erji-kuanxian{
+				width: 1200px; height: 134px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#erji-kuanxian ul{
+				list-style: none;
+				position: absolute;
+				left: -36px; top: 32px;
+			}
+			#erji-kuanxian ul li{
+				float: left;
+				margin-left: 110px;
+			}
+			#erji-kuanxian ul li img{
+				height: 44px;
+			}
+			#erji-kuanxian ul li p{
+				font-size: 16px;
+				margin-left: -10px;
+				color: #898989;
+			}
+			#xiantiao{
+				position: absolute;
+				top: 136px;
+				width: 100%; height: 1px;
+				background: #d6d6d6;
+			}
+/*one*/			
+			#erji-one{
+				width: 1200px; height: 320px;
+				position: relative;
+				margin: 0 auto;
+				display: block;
+			}
+			#one-one{
+				width: 1px; height: 38px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#one-two{
+				width: 1px; height: 266px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 244px;
+			}
+			#one-three{
+				width: 1px; height: 266px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 428px;
+			}
+			#one-four{
+				width: 1px; height: 238px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 612px;
+			}
+			#one-five{
+				width: 1px; height: 238px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 796px;
+			}
+			#one-six{
+				width: 1px; height: 38px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 980px;
+			}
+			#erji-one ul{
+				list-style: none;
+				position: absolute;
+				left: -36px; top: 32px;
+			}
+			#erji-one ul li{
+				float: left;
+				margin-left: 114px;
+			}
+			#erji-one ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-onf ul{
+				position: absolute;
+				top: 60px; left: 190px;
+			}
+			#erji-onf ul li{
+				margin-left: 70px;
+			}
+			#erji-onf ul li:nth-of-type(4){
+				margin-left: 90px;
+			}
+			#erji-onf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*two*/			
+			#erji-two{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#two-one{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#two-two{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 268px;
+			}
+			#two-three{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 476px;
+			}
+			#two-four{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 684px;
+			}
+			#two-five{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 892px;
+			}
+			#erji-two ul{
+				list-style: none;
+				position: absolute;
+				left: -36px; top: 32px;
+			}
+			#erji-two ul li{
+				float: left;
+				margin-left: 118px;
+			}
+			#erji-two ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-dnf ul{
+				position: absolute;
+				top: 60px; left: -20px;
+			}
+			#erji-dnf ul li{
+				margin-left: 100px;
+			}
+			#erji-dnf ul li:nth-of-type(5){
+				margin-left: 110px;
+			}
+			#erji-dnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*three*/			
+			#erji-three{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#three-one{
+				width: 1px; height: 290px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#three-two{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 268px;
+			}
+			#three-three{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 476px;
+			}
+			#three-four{
+				width: 1px; height: 260px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 684px;
+			}
+			#three-five{
+				width: 1px; height: 290px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 892px;
+			}
+			#erji-three ul{
+				list-style: none;
+				position: absolute;
+				left: -36px; top: 32px;
+			}
+			#erji-three ul li{
+				float: left;
+				margin-left: 124px;
+			}
+			#erji-three ul li:nth-of-type(5){
+				float: left;
+				margin-left: 50px;
+			}
+			#erji-three ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-wnf ul{
+				position: absolute;
+				top: 60px; left: -28px;
+			}
+			#erji-wnf ul li{
+				margin-left: 124px;
+			}
+			#erji-wnf ul li:nth-of-type(4){
+				margin-left: 140px;
+			}
+			#erji-wnf ul li:nth-of-type(5){
+				margin-left: 100px;
+			}
+			#erji-wnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*four*/			
+            #erji-four{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#four-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#four-two{
+				width: 1px; height: 280px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 244px;
+			}
+			#four-three{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 428px;
+			}
+			#four-four{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 612px;
+			}
+			#four-five{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 796px;
+			}
+			#four-six{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 980px;
+			}
+			#erji-four ul{
+				list-style: none;
+				position: absolute;
+				left: -30px; top: 32px;
+			}
+			#erji-four ul li{
+				float: left;
+				margin-left: 110px;
+			}
+			#erji-four ul li:nth-of-type(2){
+				float: left;
+				margin-left: 100px;
+			}#erji-four ul li:nth-of-type(3){
+				float: left;
+				margin-left: 50px;
+			}
+			#erji-four ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-nnf ul{
+				position: absolute;
+				top: 60px; left: -22px;
+			}
+			#erji-nnf ul li{
+				margin-left: 104px;
+			}
+			#erji-nnf ul li:nth-of-type(3){
+				margin-left: 86px;
+			}
+			#erji-nnf ul li:nth-of-type(5){
+				margin-left: 110px;
+			}
+			#erji-nnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*five*/
+			#erji-five{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#five-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#five-two{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 340px;
+			}
+			#five-three{
+				width: 1px; height: 32px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 620px;
+			}
+			#five-four{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 900px;
+			}
+			#erji-five ul{
+				list-style: none;
+				position: absolute;
+				left: -160px; top: 32px;
+			}
+			#erji-five ul li{
+				float: left;
+				margin-left: 240px;
+			}
+			#erji-five ul li:nth-of-type(4){
+				float: left;
+				margin-left: 180px;
+			}
+			#erji-five ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-znf ul{
+				position: absolute;
+				top: 60px; left: -160px;
+			}
+			#erji-znf ul li{
+				margin-left: 236px;
+			}
+			#erji-znf ul li:nth-of-type(3){
+				margin-left: 500px;
+			}
+			#erji-znf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*six*/
+			#erji-six{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#six-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#six-two{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 340px;
+			}
+			#six-three{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 620px;
+			}
+			#six-four{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 900px;
+			}
+			#erji-six ul{
+				list-style: none;
+				position: absolute;
+				left: -140px; top: 32px;
+			}
+			#erji-six ul li{
+				float: left;
+				margin-left: 220px;
+			}
+			#erji-six ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-qnf ul{
+				position: absolute;
+				top: 60px; left: -90px;
+			}
+			#erji-qnf ul li{
+				margin-left: 170px;
+			}
+			#erji-qnf ul li:nth-of-type(3){
+				margin-left: 200px;
+			}
+			#erji-qnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*seven*/
+			#erji-seven{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#seven-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#seven-two{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 260px;
+			}
+			#seven-three{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 460px;
+			}
+			#seven-four{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 660px;
+			}
+			#seven-five{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 860px;
+			}
+			#erji-seven ul{
+				list-style: none;
+				position: absolute;
+				left: -60px; top: 32px;
+			}
+			#erji-seven ul li{
+				float: left;
+				margin-left: 130px;
+			}
+			#erji-seven ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#erji-enf ul{
+				position: absolute;
+				top: 60px; left: -38px;
+			}
+			#erji-enf ul li{
+				margin-left: 120px;
+			}
+			#erji-enf ul li:nth-of-type(2){
+				margin-left: 40px;
+			}
+			#erji-enf ul li:nth-of-type(4){
+				margin-left: 120px;
+			}
+			#erji-enf ul li:nth-of-type(5){
+				margin-left: 100px;
+			}
+			#erji-enf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+			
+			
+/*三级*/			
+			#sanji{
+				width: 100%;
+				border: 1px solid #bfbfbf;
+				background: white;
+				display: none;
+				position: absolute;
+				top: 70px;
+				z-index: 3;
+			}
+			#sanji-kuanxian{
+				width: 1200px; height: 134px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#sanji-kuanxian ul{
+				list-style: none;
+				position: absolute;
+				left: -106px; top: 32px;
+			}
+			#sanji-kuanxian ul li{
+				float: left;
+				margin-left: 184px;
+			}
+			#sanji-kuanxian ul li img{
+				height: 44px;
+			}
+			#sanji-kuanxian ul li p{
+				font-size: 16px;
+				margin-left: -10px;
+				color: #898989;
+			}
+			#xiantiao{
+				position: absolute;
+				top: 136px;
+				width: 100%; height: 1px;
+				background: #d6d6d6;
+			}
+/*eight*/			
+			#sanji-eight{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: block;
+			}
+			#eight-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#eight-two{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 460px;
+			}
+			#eight-three{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 860px;
+			}
+			#sanji-eight ul{
+				list-style: none;
+				position: absolute;
+				left: -240px; top: 32px;
+			}
+			#sanji-eight ul li{
+				float: left;
+				margin-left: 350px;
+			}
+			#sanji-eight ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#sanji-inf ul{
+				position: absolute;
+				top: 60px; left: -220px;
+			}
+			#sanji-inf ul li{
+				margin-left: 320px;
+			}
+			#sanji-inf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*nine*/			
+			#sanji-nine{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#nine-one{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#nine-two{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 350px;
+			}
+			#nine-three{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 640px;
+			}
+			#nine-four{
+				width: 1px; height: 236px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 930px;
+			}
+			#sanji-nine ul{
+				list-style: none;
+				position: absolute;
+				left: -120px; top: 32px;
+			}
+			#sanji-nine ul li{
+				float: left;
+				margin-left: 240px;
+			}
+			#sanji-nine ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#sanji-lnf ul{
+				position: absolute;
+				top: 60px; left: -100px;
+			}
+			#sanji-lnf ul li{
+				margin-left: 184px;
+			}
+			#sanji-lnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+/*ten*/			
+			#sanji-ten{
+				width: 1200px; height: 84px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#ten-one{
+				width: 1px; height: 36px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#ten-two{
+				width: 1px; height: 36px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 560px;
+			}
+			#sanji-ten ul{
+				list-style: none;
+				position: absolute;
+				left: -310px; top: 32px;
+			}
+			#sanji-ten ul li{
+				float: left;
+				margin-left: 390px;
+			}
+			#sanji-ten ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+/*eleven*/			
+			#sanji-eleven{
+				width: 1200px; height: 84px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#eleven-one{
+				width: 1px; height: 36px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#eleven-two{
+				width: 1px; height: 36px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 460px;
+			}
+			#eleven-three{
+				width: 1px; height: 36px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 860px;
+			}
+			#sanji-eleven ul{
+				list-style: none;
+				position: absolute;
+				left: -270px; top: 32px;
+			}
+			#sanji-eleven ul li{
+				float: left;
+				margin-left: 340px;
+			}
+			#sanji-eleven ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+/*twelve*/			
+			#sanji-twelve{
+				width: 1200px; height: 320px;
+				position: relative;
+				background: white;
+				margin: 0 auto;
+				display: none;
+			}
+			#twelve-one{
+				width: 1px; height: 280px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 60px;
+			}
+			#twelve-two{
+				width: 1px; height: 280px;
+				background: #999999;
+				position: absolute;
+				top: 26px; left: 560px;
+			}
+			#sanji-twelve ul{
+				list-style: none;
+				position: absolute;
+				left: -380px; top: 32px;
+			}
+			#sanji-twelve ul li{
+				float: left;
+				margin-left: 480px;
+			}
+			#sanji-twelve ul li a{
+				font-size: 18px;
+				text-decoration: none;
+				color: #33a5ff;
+			}
+			#sanji-bnf ul{
+				position: absolute;
+				top: 60px; left: -400px;
+			}
+			#sanji-bnf ul li{
+				margin-left: 480px;
+			}
+			#sanji-bnf ul li p{
+				font-size: 16px;
+				margin-top: 10px;
+				color: #898989;
+			}
+			
+		</style>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</head>
 	<body>
+		
+		<header>
+			<div id="head">
+				<ul>
+					<li id="gps"><a href="#">个人&家用产品<img src="img/下箭头.png"/></a></li>
+					<li id="gps1"><a href="#">商用&解决方案<img src="img/下箭头.png"/></a></li>
+					<li><a href="#">商城</a></li>
+					<li><a href="#">社区</a></li>
+					<li><a href="#">服务</a></li>
+					<li><a href="#">资讯</a></li>
+					<li><a href="#">门店</a></li>
+				</ul>
+				<input type="text" name="" id="head-txtone" value="智能头盔"/>
+				<div id="head-cir"><a href="#"><img src="img/搜索.png"/></a></div>
+				<div id="head-main">
+					<a href="#"><img src="img/人物.png"/></a>
+					<a href="#"><img src="img/购物车.png"/></a>
+				</div>
+				<div id="head-main--1">
+					<a href="#"><img src="img/人物--1.png"/></a>
+					<a href="#"><img src="img/购物车--1.png"/></a>
+				</div>
+				<input type="text" name="" id="head-sup" value="0"/>
+			</div>
+			<img src="img/0d66fb8c-f7b0-4d2c-888c-51d56f67aeab_1.jpg" id="header-logo"/>
+			<img src="img/2642a0cd-0b67-4684-86e0-51036c82e72c.jpg" id="header-logo1"/>
+		</header>
+		
+		<div id="erji">
+			<div id="erji-kuanxian">
+				<ul>
+					<li class="wqy">
+						<a href="#"><img src="img/0b5cfe32-189e-4fbc-b542-5f5492d60365.png"/></a>
+						<p>智选生活</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/3d7bd68e-0db7-4431-b9bc-54303e361d77.png"/></a>
+						<p>Lenovo电脑</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/74e26541-8a63-4289-8146-c7e81b5c5666.png"/></a>
+						<p>ThinkPad</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/2a11c02e-fc03-45df-bc13-96dc086192a8.png"/></a>
+						<p>平板电脑</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/0b5cfe32-189e-4fbc-b542-5f5492d60365.png"/></a>
+						<p>手机/通信</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/6e0d26bb-1bd0-48f7-aa81-e3e9a4bf54cb.png"/></a>
+						<p>选件/打印</p>
+					</li>
+					<li class="wqy">
+						<a href="#"><img src="img/1c43bc83-d1c6-41d9-9d9c-a8384c8b25f1.png"/></a>
+						<p>服务升级</p>
+					</li>
+				</ul>
+			</div>
+			<div id="erji-one" class="wqq">
+				<div id="one-one"></div>
+				<div id="one-two"></div>
+				<div id="one-three"></div>
+				<div id="one-four"></div>
+				<div id="one-five"></div>
+				<div id="one-six"></div>
+				<ul>
+					<li><a href="#">智能头盔</a></li>
+					<li><a href="#">联想智选</a></li>
+					<li><a href="#">智能电视</a></li>
+					<li><a href="#">智能设备</a></li>
+					<li><a href="#">智能硬件</a></li>
+					<li><a href="#">智能音箱</a></li>
+				</ul>
+				<div id="erji-onf">
+					<ul>
+						<li><a href="#">
+							<p>>>智能触控台灯</p><p>>>智能编程机器人</p><p>>>空气净化器</p><p>>>内裤洗护机</p><p>>>降噪耳机</p><p>>>加热披肩</p><p>>>拉杆箱</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>17系列 65i3</p><p>>>E系列 55E6</p><p>>>E系列 49E6</p><p>>>E系列 43E6</p><p>>>E系列 39E6</p><p>>>E系列 65E8</p><p>>>E系列 65E8</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>智能摄像头</p><p>>>硬件家居</p><p>>>K歌宝</p><p>>>路由器</p><p>>>行车记录仪</p><p>>>录音笔 </p>
+						</a></li>
+						<li><a href="#">
+							<p>>>看家宝</p><p>>>一键鼠标</p><p>>>智能插线板</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-two" class="wqq">
+				<div id="two-one"></div>
+				<div id="two-two"></div>
+				<div id="two-three"></div>
+				<div id="two-four"></div>
+				<div id="two-five"></div>
+				<ul>
+					<li><a href="#">常规笔记本</a></li>
+					<li><a href="#">轻薄笔记本</a></li>
+					<li><a href="#">便携笔记本</a></li>
+					<li><a href="#">游戏笔记本</a></li>
+					<li><a href="#">台式机/显示器</a></li>
+				</ul>
+				<div id="erji-dnf">
+					<ul>
+						<li><a href="#">
+							<p>>>ideapad 110</p><p>>>ideapad 320</p><p>>>小新潮5000</p><p>>>天逸</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>小新潮7000</p><p>>>ideapad 320s</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>YOGA 5 Pro</p><p>>>YOGA 6 Pro</p><p>>>YOGA 710</p><p>>>YOGA 720</p><p>>>小新Air12</p><p>>>ideapad 720s</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>拯救者R720</p><p>>>拯救者Y920</p><p>>>拯救者Y720</p><p>>>拯救者E520</p><p>>>小新锐7000</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>分体台式机</p><p>>>一体台式机</p><p>>>游戏主机</p><p>>>显示器</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-three" class="wqq">
+				<div id="three-one"></div>
+				<div id="three-two"></div>
+				<div id="three-three"></div>
+				<div id="three-four"></div>
+				<div id="three-five"></div>
+				<ul>
+					<li><a href="#">ThinkPad</a></li>
+					<li><a href="#">ThinkCenter</a></li>
+					<li><a href="#">Think平板</a></li>
+					<li><a href="#">ThinkVision显示器</a></li>
+					<li><a href="#">Think选件</a></li>
+				</ul>
+				<div id="erji-wnf">
+					<ul>
+						<li><a href="#">
+							<p>>>S系列</p><p>>>E系列</p><p>>>X系列</p><p>>>T系列</p><p>>>X1系列</p><p>>>P系列</p><p>>>A系列</p><p>>>R系列</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>分体台式机</p><p>>>一体台式机</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>X1系列</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>ThinkVision</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>电脑包</p><p>>>智能手环</p><p>>>键鼠</p><p>>>存储</p><p>>>电池电源</p><p>>>智能数码</p><p>>>转接&扩展设备</p><p>>>其他配件</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-four" class="wqq">
+				<div id="four-one"></div>
+				<div id="four-two"></div>
+				<div id="four-three"></div>
+				<div id="four-four"></div>
+				<div id="four-five"></div>
+				<div id="four-six"></div>
+				<ul>
+					<li><a href="#">小新平板</a></li>
+					<li><a href="#">MIIX二合一笔记本</a></li>
+					<li><a href="#">YOGA平板</a></li>
+					<li><a href="#">手机平板</a></li>
+					<li><a href="#">常规平板</a></li>
+					<li><a href="#">平板选件</a></li>
+				</ul>
+				<div id="erji-nnf">
+					<ul>
+						<li><a href="#">
+							<p>>>小新平板</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>MIIK 520</p><p>>>MIIK 210</p><p>>>MIIK 5 Plus</p><p>>>MIIK 320</p><p>>>MIIK 5 Pro</p><p>>>MIIK 4 Pro</p><p>>>MIIK 5</p><p>>>MIIK 4</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>YOGA BOOK</p><p>>>YOGA平板3</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>Phab</p><p>>>Phab2</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>TAB4</p><p>>>TAB4 Plus</p><p>>>P8</p><p>>>TAB2</p><p>>>TAB3</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>YOGA BOOK 选件</p><p>>>MIIK 选件</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-five" class="wqq">
+				<div id="five-one"></div>
+				<div id="five-two"></div>
+				<div id="five-three"></div>
+				<div id="five-four"></div>
+				<ul>
+					<li><a href="#">Moto</a></li>
+					<li><a href="#">Lenovo</a></li>
+					<li><a href="#">手机无线U盘</a></li>
+					<li><a href="#">通信</a></li>
+				</ul>
+				<div id="erji-znf">
+					<ul>
+						<li><a href="#">
+							<p>>>手机</p>
+							<p>>>Mods</p>
+							<p>>>配件</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>K320t</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>170号码</p>
+							<p>>>港澳及国际卡</p>
+							<p>>>充值中心</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-six" class="wqq">
+				<div id="six-one"></div>
+				<div id="six-two"></div>
+				<div id="six-three"></div>
+				<div id="six-four"></div>
+				<ul>
+					<li><a href="#">打印机</a></li>
+					<li><a href="#">电脑配件</a></li>
+					<li><a href="#">电脑配件</a></li>
+					<li><a href="#">移动存储</a></li>
+				</ul>
+				<div id="erji-qnf">
+					<ul>
+						<li><a href="#">
+							<p>>>单功能打印机</p>
+							<p>>>多功能一体机</p>
+							<p>>>耗材</p>
+							<p>>>3D打印机</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>键鼠</p>
+							<p>>>电脑包</p>
+							<p>>>清洁套装</p>
+							<p>>>音箱音响</p>
+							<p>>>电池电源</p>
+							<p>>>智能数码</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>转接&扩展设备</p>
+							<p>>>适配器</p>
+							<p>>>光驱托架</p>
+							<p>>>鼠标垫</p>
+							<p>>>耳机</p>
+							<p>>>其他配件</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>U盘</p>
+							<p>>>移动硬盘</p>
+							<p>>>SSD固态硬盘</p>
+							<p>>>存储卡</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="erji-seven" class="wqq">
+				<div id="seven-one"></div>
+				<div id="seven-two"></div>
+				<div id="seven-three"></div>
+				<div id="seven-four"></div>
+				<div id="seven-five"></div>
+				<ul>
+					<li><a href="#">硬件升级</a></li>
+					<li><a href="#">延保与上门</a></li>
+					<li><a href="#">软件服务</a></li>
+					<li><a href="#">清洁保养</a></li>
+					<li><a href="#">数据恢复</a></li>
+				</ul>
+				<div id="erji-enf">
+					<ul>
+						<li><a href="#">
+							<p>>>内存升级</p>
+							<p>>>SSD固态硬盘升级</p>
+							<p>>>旧机升级（台式机）</p>
+							<p>>>刃7000灯效升级</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>延长保修</p>
+							<p>>>上门服务</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>新机开荒</p>
+							<p>>>专家上门</p>
+							<p>>>驱动安装</p>
+							<p>>>电脑加速</p>
+							<p>>>PPT设计</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>电脑深度立体</p>
+							<p>>>清洁保养</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>数据恢复</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="xiantiao"></div>
+		</div>
+			
+		<div id="sanji">
+			<div id="sanji-kuanxian">
+				<ul>
+					<li class="wql">
+						<a href="#"><img src="img/9cd869ff-7075-49e1-9268-e39f4036d745.png"/></a>
+						<p>商用电脑</p>
+					</li>
+					<li class="wql">
+						<a href="#"><img src="img/9c67b87e-c03d-4f2a-9bdd-2e8e565c7563.png"/></a>
+						<p>企业级</p>
+					</li>
+					<li class="wql">
+						<a href="#"><img src="img/86bb0d0b-7594-43e7-81c1-af339edde0c9.png"/></a>
+						<p>解决方案</p>
+					</li>
+					<li class="wql">
+						<a href="#"><img src="img/675ad278-5fd0-4d9b-b504-77e72f722b3e.png"/></a>
+						<p>移动互联</p>
+					</li>
+					<li class="wql">
+						<a href="#"><img src="img/81bfee2f-41b4-4dbb-9f8f-af99d04227d8.png"/></a>
+						<p>周边产品</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="sanji-eight" class="wqo">
+				<div id="eight-one"></div>
+				<div id="eight-two"></div>
+				<div id="eight-three"></div>
+				<ul>
+					<li><a href="#">笔记本</a></li>
+					<li><a href="#">台式机</a></li>
+					<li><a href="#">工作站</a></li>
+				</ul>
+				<div id="sanji-inf">
+					<ul>
+						<li><a href="#">
+							<p>>>昭阳</p>
+							<p>>>扬天</p>
+							<p>>>ThinkPad</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>分体台式机</p>
+							<p>>>一体台式机</p>
+							<p>>>迷你台式机</p>
+							<p>>>瘦客户机</p>
+							<p>>>扬天</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>移动工作站</p>
+							<p>>>ThinkStation</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="sanji-nine" class="wqo">
+				<div id="nine-one"></div>
+				<div id="nine-two"></div>
+				<div id="nine-three"></div>
+				<div id="nine-four"></div>
+				<ul>
+					<li><a href="#">服务器</a></li>
+					<li><a href="#">存储</a></li>
+					<li><a href="#">网络设备</a></li>
+					<li><a href="#">融合架构</a></li>
+				</ul>
+				<div id="sanji-lnf">
+					<ul>
+						<li><a href="#">
+							<p>>>塔式服务器</p>
+							<p>>>机架式服务器</p>
+							<p>>>刀片服务器</p>
+							<p>>>高密度服务器</p>
+							<p>>>服务器选件</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>SAN存储</p>
+							<p>>>NAS存储</p>
+							<p>>>光纤交换机</p>
+							<p>>>存储软件</p>
+							<p>>>磁带库</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>架顶式交换机</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>ThinkAgile SX2200N</p>
+							<p>>>ThinkAgile SX for Nutanix</p>
+							<p>>>ThinkAgile HX系列</p>
+							<p>>>ThinkAgile SX for</p>
+							<p>Microsoftnbsp Azure Stack</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="sanji-ten" class="wqo">
+				<div id="ten-one"></div>
+				<div id="ten-two"></div>
+				<ul>
+					<li><a href="#">数据中心解决方案</a></li>
+					<li><a href="#">行业应用解决方案</a></li>
+				</ul>
+			</div>
+			
+			<div id="sanji-eleven" class="wqo">
+				<div id="eleven-one"></div>
+				<div id="eleven-two"></div>
+				<div id="eleven-three"></div>
+				<ul>
+					<li><a href="#">TAB系列</a></li>
+					<li><a href="#">YOGA系列</a></li>
+					<li><a href="#">PHAB系列</a></li>
+				</ul>
+			</div>
+			
+			<div id="sanji-twelve" class="wqo">
+				<div id="twelve-one"></div>
+				<div id="twelve-two"></div>
+				<ul>
+					<li><a href="#">显示器</a></li>
+					<li><a href="#">智能眼镜</a></li>
+				</ul>
+				<div id="sanji-bnf">
+					<ul>
+						<li><a href="#">
+							<p>>>通用显示器</p>
+							<p>>>专用显示器</p>
+						</a></li>
+						<li><a href="#">
+							<p>>>C100</p>
+							<p>>>C200</p>
+							<p>>>M100</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="xiantiao"></div>
+		</div>
+		
+		
 		<div class="banner">
 			<a href="https://shop.lenovo.com.cn/activity/marketing/winter/index.html?pmf_group=sc-push&pmf_medium=banner-gw&pmf_source=Z00001740T000"><img style="opacity: 1;" src="https://p2.lefile.cn/product/adminweb/2018/01/25/8404d0e7-376d-4a02-a594-377e31a3d82b.jpg"/>
 			</a>
@@ -205,5 +1596,62 @@
 				</div>
 			</footer>
 		</div>
+		
+		<script>
+			$(function(){
+				$(".wqy").mouseover(function(){
+					$(".wqq").css("display","none");
+					$(".wqq").eq($(this).index()).css("display","block");
+				})
+				$(".wql").mouseover(function(){
+					$(".wqo").css("display","none");
+					$(".wqo").eq($(this).index()).css("display","block");
+				})
+				
+				$("#gps").mouseover(function(){
+					$("#erji").css("display","block");
+					$("#sanji").css("display","none");
+				})
+				$("#erji").mouseleave(function(){
+					$("#erji").css("display","none");
+				})
+				$("#gps1").mouseover(function(){
+					$("#sanji").css("display","block");
+					$("#erji").css("display","none");
+				})
+				$("#sanji").mouseleave(function(){
+					$("#sanji").css("display","none");
+				})
+				
+				for (var i=0;i<$("p").length;i++) {
+					$("p").eq(i).mouseover(function(){
+						$(this).css("color","#444");
+					})
+					$("p").eq(i).mouseleave(function(){
+						$(this).css("color","#898989");
+					})
+				}
+				
+				window.onscroll=function(){
+					var t=document.documentElement.scrollTop||document.body.scrollTop;
+					if(t>=550){
+						$("#header-logo").css("display","none");
+						$("#header-logo1").css("display","block");
+						$("header").css("background","white");
+						$("#head").css("background","white");
+						$("#head-main").css("display","none");
+						$("#head-main--1").css("display","block");
+					}else{
+						$("#header-logo1").css("display","none");
+						$("#header-logo").css("display","block");
+						$("header").css("background","transparent");
+						$("#head").css("background","transparent");
+						$("#head-main").css("display","block");
+						$("#head-main--1").css("display","none");
+					}
+				}
+			})
+		</script>
+		
 	</body>
 </html>

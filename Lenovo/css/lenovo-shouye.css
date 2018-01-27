@@ -11,6 +11,7 @@ img{
 .banner{
 	position: relative;
 	top: 0;
+	z-index: 2;
 }
 .banner img{
 	position: absolute;
