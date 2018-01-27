@@ -95,4 +95,107 @@ $(function(){
 			$(elem).css({marginTop:-10});
 		})
 	})*/
+	
+	
+	/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+	$('#bigchange div').each(function(i,elem){
+		$(elem).mouseenter(function(){
+			$('#bigchange div p:nth-of-type(2) b').eq(i).css({color:'#fff'});
+			$('#bigchange div img:nth-of-type(2)').eq(i).stop().animate({opacity:0},10,'linear');
+		}).mouseleave(function(){
+			$('#bigchange div p:nth-of-type(2) b').eq(i).css({color:'#000'});
+			$('#bigchange div img:nth-of-type(2)').eq(i).delay(500).animate({opacity:1},10,'linear');
+		})
+	})
+	
+	
+	//world
+	
+	var world=document.getElementById('world');
+	var p=world.querySelectorAll('p')
+	var ul=world.querySelector('ul');
+	var lis=ul.getElementsByTagName('li');
+	ul.innerHTML+=ul.innerHTML;
+	ul.style.width=lis[0].clientWidth*lis.length+'px';
+	var q=0;
+	var timerw=setInterval(function(){
+		q++;
+		if(q==lis.length/2){
+			ul.style.marginLeft=0;
+			q=0;
+		}
+		/*ul.style.marginLeft=-40-lis[0].clientWidth*q+'px';*/
+		$(ul).animate({marginLeft:-lis[0].clientWidth*q},1000,'linear');
+	},4000)
+	
+	for(var i=0;i<lis.length/2;i++){
+		lis[i].onmouseenter=function(){
+			clearInterval(timerw);
+		}
+		lis[i].onmouseleave=function(){
+		timerw=setInterval(function(){
+		q++;
+		if(q==lis.length/2){
+			ul.style.marginLeft=0;
+			q=0;
+		}
+		$(ul).animate({marginLeft:-lis[0].clientWidth*q},1000,'linear');
+	},4000)
+		}
+	}
+	
+	p[0].onclick=function(){
+		q++;
+		if(q==lis.length/2){
+			ul.style.marginLeft=0;
+			q=0;
+		}
+		$(ul).animate({marginLeft:-lis[0].clientWidth*q},1000,'linear');
+	}
+	p[1].onclick=function(){
+		q--;
+		if(q<0){
+			ul.style.marginLeft=lis[0].clientWidth*q+'px';
+			q=lis.length/2-1;
+		}
+		$(ul).animate({marginLeft:-lis[0].clientWidth*q},1000,'linear');
+	}
+	
+	for(var i=0;i<p.length;i++){
+		p[i].onmouseenter=function(){
+			clearInterval(timerw);
+		}
+		p[i].onmouseleave=function(){
+		timerw=setInterval(function(){
+		q++;
+		if(q==lis.length/2){
+			ul.style.marginLeft=0;
+			q=0;
+		}
+		$(ul).animate({marginLeft:-lis[0].clientWidth*q},1000,'linear');
+	},4000)
+		}
+	}
+	
+	/*换国旗*/
+	var x=['img/2345截图20180127083209.png','img/2345截图20180127094450.png'];
+	
+	var bigbottom=document.getElementById('bigbottom');
+	var imgh=document.getElementById('imgh');
+	var sec=bigbottom.querySelector('select');
+	var opa=bigbottom.querySelectorAll('select option');
+	sec.onchange=function(){
+		for(var s=0;s<opa.length;s++){
+			/*alert(this.value);*/
+			if(this.value%2==1){
+				imgh.setAttribute('src',x[0]);
+			}else{
+				imgh.setAttribute('src',x[1]);
+			}
+			
+		}
+		
+		
+		
+	}
 })
