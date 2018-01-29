@@ -23,27 +23,74 @@ $(function(){
 		}
 	},3000);
 	
-	//顶部效果
+	//顶部
 	$(document).scroll(function(){
 		if($(document).scrollTop()!=0){
 			$('header').css('position','fixed');
-			$('.nav_down img').attr('src','img/2642a0cd-0b67-4684-86e0-51036c82e72c.jpg');
-			$('.nav_down img').css('width','4rem');
+			$('header img').attr('src','img/556db20f-e4d1-4ff8-8a24-8680b1da64fd.png');
+			$('header img').css('width','4rem')
 		}
 		if($(document).scrollTop()==0){
 			$('header').css('position','relative');
-			$('.nav_down img').css('width','5rem');
-			$('.nav_down img').attr('src','img/0d66fb8c-f7b0-4d2c-888c-51d56f67aeab_1.jpg');
+			$('header img').attr('src','img/0d66fb8c-f7b0-4d2c-888c-51d56f67aeab_1.jpg');
+			$('header img').css('width','5rem')
 		}
 	})
 	
 	//选项卡
 	$('.content_tab span').click(function(){
-		$('.content_tab span').css('color','#D0CBCF');
+		$('.content_tab span').css('color','#D0CBCF')
 		$(this).css('color','#fff');
+		$(this).attr('class','active');
+		//console.log($(this).index());
 		$('.tab_hollow').css('display','none');
 		$('.tab_hollow').eq($(this).index()).css('display','block');
 	})
+	
+	/*$('#bigvideo #video section img:nth-of-type(2)').click(function(){
+	$('#bigvideo #video section video').css({display:'block'}).play();
+	$('#bigvideo #video section p').css({display:'block'});*/
+	var imgtwo=document.querySelector('#bigvideo #video section img:nth-of-type(2)');
+	var video=document.querySelector('#bigvideo #video section video');
+	var videop=document.querySelector('#bigvideo #video section p');
+	imgtwo.onclick=function(){
+		video.style.display='block';
+		videop.style.display='block';
+		video.play();
+	}
+	videop.onclick=function(){
+		video.style.display='none';
+		videop.style.display='none';
+		video.pause();
+		video.currentTime=0;
+	}
+	var kaiguan=true;
+	video.onclick=function(){
+		if(!kaiguan){
+			video.play();
+		}else{
+			video.pause();
+		}
+		kaiguan=!kaiguan;
+	}
+	
+		/*换国旗*/
+	var x=['img/2345截图20180127083209.png','img/2345截图20180127094450.png'];
+	
+	var bigbottom=document.getElementById('bigbottom');
+	var imgh=document.getElementById('imgh');
+	var sec=bigbottom.querySelector('select');
+	var opa=bigbottom.querySelectorAll('select option');
+	sec.onchange=function(){
+		for(var s=0;s<opa.length;s++){
+			/*alert(this.value);*/
+			if(this.value%2==1){
+				imgh.setAttribute('src',x[0]);
+			}else{
+				imgh.setAttribute('src',x[1]);
+			}
+		}
+	}
 })
 function fn11(data){
 	var input=document.querySelector(".nav_down input");

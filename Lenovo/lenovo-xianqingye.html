@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/lenovo-xiangqingye.css"/>
+		<script src="js/jquery-3.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lenovo-xianqingye.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		$(function(){
+			/*one*/
+			moveb();
+			function moveb(){
+				$('#bigcomputer #smallcomputer img:nth-of-type(1)').animate({width:738,opacity:1,left:226,top:190},500,'linear');
+				oneeight(18,100,750,330);oneeight(19,140,226,376);oneeight(20,160,1000,350);oneeight(21,170,20,400);
+				onefour(2,1500);onefour(3,1500);onefour(4,1500);onefour(5,1500);
+				onefour(6,1800);onefour(7,1800);onefour(8,1800);onefour(9,1800);
+				onefour(10,1200);onefour(11,1200);onefour(12,1200);onefour(13,1200);
+				onefour(14,900);onefour(15,900);onefour(16,900);onefour(17,900);
+				setInterval(function(){
+				$('#bigcomputer #smallcomputer img:nth-of-type(18)').delay(100).animate({top:330},800,'linear').animate({top:360},800,'linear');
+				$('#bigcomputer #smallcomputer img:nth-of-type(19)').delay(100).animate({top:376},800,'linear').animate({top:406},800,'linear');
+				$('#bigcomputer #smallcomputer img:nth-of-type(20)').delay(100).animate({top:350},800,'linear').animate({top:380},800,'linear');
+				$('#bigcomputer #smallcomputer img:nth-of-type(21)').delay(100).animate({top:400},800,'linear').animate({top:430},800,'linear');	
+				},600)
+			}
+			function oneeight(figuer,wid,lef,top){
+				$('#bigcomputer #smallcomputer img:nth-of-type('+figuer+')').delay(500).animate({width:wid,opacity:1,left:lef,top:top},400,'linear');
+			}
+			function onefour(figur,timeq){
+			$('#bigcomputer #smallcomputer img:nth-of-type('+figur+')').delay(timeq).animate({opacity:1},400,'linear');	
+			}
+			/*two*/
+			var helpimg=document.querySelectorAll('#bighelp #help div:nth-of-type(1) img')
+			var p=-1;
+			setInterval(function(){
+				for(var i=0;i<helpimg.length;i++){
+					helpimg[i].style.opacity=0;
+				}
+				p+=1;
+				if(p>4){
+					p=0;
+				}
+				helpimg[p].style.opacity=1;
+			},200)
+			/*three*/
+			movetime();
+			var timer;
+			var timer1;
+			
+			$('#bighelp #help div:nth-of-type(4) img:nth-of-type(1)').mouseenter(function(){
+				   $('#bighelp #help div:nth-of-type(3) img').css({opacity:0});
+					$('#bighelp #help div:nth-of-type(3) img:nth-of-type(1)').css({left:-300});
+					$('#bighelp #help div:nth-of-type(3) img:nth-of-type(2)').css({left:800});
+					$('#bighelp #help div:nth-of-type(3) img:nth-of-type(5)').css({left:1100});
+				   clearInterval(timer);
+					movetime();
+				})
+			function movetime(){
+				$('#bighelp #help div:nth-of-type(2) img:nth-of-type(1)').stop(true,true).animate({left:460,opacity:1},500,'linear').animate({top:50},300,'swing').animate({top:40},300,'swing').animate({top:50},300,'swing').animate({top:40},300,'swing');
+				$('#bighelp #help div:nth-of-type(2) img:nth-of-type(2)').stop().delay(400).animate({left:208,opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(2) img:nth-of-type(3)').stop().delay(800).animate({opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(2) img:nth-of-type(4)').stop().delay(800).animate({opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(2) img:nth-of-type(5)').stop().delay(800).animate({left:240,opacity:1},500,'linear');
+				var s=1;
+			   timer=setInterval(function(){
+					s++;
+					$('#bighelp #help div:nth-of-type(2) img:nth-of-type(3)').css({transform:'rotate('+s+'deg)'})
+				},10)
+			}
+			$('#bighelp #help div:nth-of-type(4) img:nth-of-type(2)').mouseenter(function(){
+				   $('#bighelp #help div:nth-of-type(2) img').css({opacity:0});
+					$('#bighelp #help div:nth-of-type(2) img:nth-of-type(1)').css({left:800});
+					$('#bighelp #help div:nth-of-type(2) img:nth-of-type(2)').css({left:-208});
+					$('#bighelp #help div:nth-of-type(2) img:nth-of-type(5)').css({left:-216});
+				   clearInterval(timer1);
+					movetime1();
+			})
+			/*er*/
+			
+			function movetime1(){
+			$('#bighelp #help div:nth-of-type(3) img:nth-of-type(1)').stop(true,true).animate({left:200,opacity:1},500,'linear').animate({top:60},300,'swing').animate({top:50},300,'swing').animate({top:60},300,'swing').animate({top:50},300,'swing');
+				$('#bighelp #help div:nth-of-type(3) img:nth-of-type(2)').stop().delay(400).animate({left:500,opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(3) img:nth-of-type(3)').stop().delay(800).animate({opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(3) img:nth-of-type(4)').stop().delay(800).animate({opacity:1},500,'linear');
+				$('#bighelp #help div:nth-of-type(3) img:nth-of-type(5)').stop().delay(800).animate({left:780,opacity:1},500,'linear');
+				var s=1;
+			   timer1=setInterval(function(){
+					s++;
+					$('#bighelp #help div:nth-of-type(3) img:nth-of-type(3)').css({transform:'rotate('+s+'deg)'})
+				},10)	
+			}
+		})
+		</script>
+	</head>
+	<body>
+		<div id="bigcomputer">
+			<div id="smallcomputer">
+			  <img src="img/theme.png"/>
+				<img src="img/border1.png"/>
+				<img src="img/border2.png"/>
+				<img src="img/border3.png"/>
+				<img src="img/border4.png"/>
+				<img src="img/text1.png"/>
+				<img src="img/text2.png"/>
+				<img src="img/text3.png"/>
+				<img src="img/text4.png"/>
+				<img src="img/xian1.png"/>
+				<img src="img/xian2.png"/>
+				<img src="img/xian3.png"/>
+				<img src="img/xian4.png"/>
+				<img src="img/quanleft.png"/>
+				<img src="img/quanright.png"/>
+				<img src="img/quanleft.png"/>
+				<img src="img/quanright.png">
+				<img src="img/b1.png"/>
+				<img src="img/b2.png"/>
+				<img src="img/b3.png"/>
+				<img src="img/b4.png"/>
+			</div>
+			</div>
+			
+			
+			<div id="bighelp">
+				<div id="help">
+					<div>
+					<img src="img/borderbottom1.png"/>
+					<img src="img/borderbottom2.png"/>
+					<img src="img/borderbottom3.png"/>
+					<img src="img/borderbottom4.png"/>
+					<img src="img/borderbottom5.png"/>
+					</div>
+					<!--yi-->
+					<div>
+					<img src="img/1-1.png"/>
+					<img src="img/550-180-1.png"/>
+					<img src="img/39-2.png"/>
+					<img src="img/513-56-1.png"/>
+					<img src="img/164-50.png"/>
+					</div>
+					<!--儿-->
+					<div>
+					<img src="img/2-1.png"/>
+					<img src="img/550-180-2.png"/>
+					<img src="img/39-2.png"/>
+					<img src="img/513-56-2.png"/>
+					<img src="img/164-50.png"/>
+					</div>
+					<div>
+						<img src="img/a1.png"/>
+						<img src="img/a2.png"/>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="help_people">
+				<div id="help_small">
+					<div style="padding-top: 14rem;" class="tab">
+						<img style="opacity: 1;" src="img/a3.png"/>
+					</div>
+					<div class="tab">
+						<img src="img/a4.png"/>
+					</div>
+					<div class="tab">
+						<img src="img/a5.png"/>
+					</div>
+					<div class="tab">
+						<img src="img/a6.png"/>
+					</div>
+					<div style="display: block;" class="tab_ho">
+						<img class="img_zi" src="img/600-1.png"/>
+						<div class="icon">
+							<img src="img/icon1-1.png"/>
+							<img src="img/icon.png"/>
+							<img src="img/icon1-3.png"/>
+							<img src="img/icon1-4.png"/>
+							<img src="img/icon1-5.png"/>
+							<img src="img/icon1-6.png"/>
+						</div>
+						<img class="img_diannao1" src="img/4-1.png"/>
+						<img class="img_zhuan_1" src="img/39-1.png"/>
+						<img class="img_cha" src="img/164-50.png"/>
+					</div>
+					<div class="tab_ho">
+						<img class="img_zi" src="img/600-2.png"/>
+						<div class="icon">
+							<img src="img/icon2-1.png"/>
+							<img src="img/icon.png"/>
+							<img src="img/icon1-3.png"/>
+							<img src="img/icon1-4.png"/>
+							<img src="img/icon2-5.png"/>
+							<img src="img/icon2-6.png"/>
+						</div>
+						<img class="img_diannao2" src="img/5-1.png"/>
+						<img class="img_zhuan_2" src="img/39-1.png"/>
+						<img class="img_cha" src="img/164-50.png"/>
+					</div>
+					<div class="tab_ho">
+						<img class="img_zi" src="img/600-3.png"/>
+						<div class="icon">
+							<img src="img/icon3-1.png"/>
+							<img src="img/icon.png"/>
+							<img src="img/icon3-3.png"/>
+							<img src="img/icon3-4.png"/>
+							<img src="img/icon3-5.png"/>
+							<img src="img/icon3-6.png"/>
+						</div>
+						<img class="img_diannao3" src="img/6-1.png"/>
+						<img class="img_zhuan_3" src="img/39-1.png"/>
+						<img class="img_cha" src="img/164-50.png"/>
+					</div>
+					<div class="tab_ho">
+						<img class="img_zi" src="img/600-4.png"/>
+						<div class="icon">
+							<img src="img/icon4-1.png"/>
+							<img src="img/icon.png"/>
+							<img src="img/icon4-3.png"/>
+							<img src="img/icon4-4.png"/>
+							<img src="img/icon4-5.png"/>
+							<img src="img/icon4-6.png"/>
+						</div>
+						<img class="img_diannao4" src="img/7-1.png"/>
+						<img class="img_zhuan_4" src="img/39-1.png"/>
+						<img class="img_cha" src="img/164-50.png"/>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
