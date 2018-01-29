@@ -3,6 +3,14 @@ $(function(){
 	var timer;
 	$('.banner').css('height',$('.banner img').css('height'));
 	//鼠标移入banner
+	$('.banner').mouseenter(function(){
+		$('.banner_sp1').css('display','block');
+		$('.banner_sp2').css('display','block');
+	});
+	$('.banner').mouseleave(function(){
+		$('.banner_sp1').css('display','none');
+		$('.banner_sp2').css('display','none');
+	});
 	$('.banner_sp span').mouseenter(function(){
 		clearInterval(timer);
 		$('.banner_sp span').each(function(i,elem){
@@ -95,8 +103,7 @@ $(function(){
 			$(elem).css({marginTop:-10});
 		})
 	})*/
-	
-	
+
 	/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
 	$('#bigchange div').each(function(i,elem){
 		$(elem).mouseenter(function(){
@@ -178,7 +185,7 @@ $(function(){
 	}
 	
 	/*换国旗*/
-	var x=['img/2345截图20180127083209.png','img/2345截图20180127094450.png'];
+	var u=['img/2345截图20180127083209.png','img/2345截图20180127094450.png'];
 	
 	var bigbottom=document.getElementById('bigbottom');
 	var imgh=document.getElementById('imgh');
@@ -188,9 +195,9 @@ $(function(){
 		for(var s=0;s<opa.length;s++){
 			/*alert(this.value);*/
 			if(this.value%2==1){
-				imgh.setAttribute('src',x[0]);
+				imgh.setAttribute('src',u[0]);
 			}else{
-				imgh.setAttribute('src',x[1]);
+				imgh.setAttribute('src',u[1]);
 			}
 		}
 	}
@@ -220,16 +227,25 @@ $(function(){
 		$("#sanji").css("display","none");
 	})
 	
-	for (var i=0;i<$("p").length;i++) {
-		$("p").eq(i).mouseover(function(){
-			$(this).css("color","#444");
-		})
-		$("p").eq(i).mouseleave(function(){
-			$(this).css("color","#898989");
-		})
-	}
 	//滚轮事件
+	var timer9;
+	$('#aside .notdiv').click(function(){
+		timer9=setInterval(function(){
+		x-=10;
+		window.scroll(0,x);
+		if(x<0){
+			clearInterval(timer9);
+		}
+		
+		},5)
+	})
 	window.onscroll=function(){
+		x=document.documentElement.scrollTop||document.body.scrollTop;
+		if(x>300){
+			$('#aside').css('display','block');
+		}else{
+			$('#aside').css('display','none');
+		}
 		var t=document.documentElement.scrollTop||document.body.scrollTop;
 		if(t>=550){
 			$("#header-logo").css("display","none");
@@ -250,6 +266,14 @@ $(function(){
 			$('#head a').css('color','#fff');
 		}
 	}
+	for (var i=0;i<$("p").length;i++) {
+		$("p").eq(i).mouseover(function(){
+			$(this).css("color","#444");
+		})
+		$("p").eq(i).mouseleave(function(){
+			$(this).css("color","#898989");
+		})
+	}
 	//链接
 	$('#bigchange div').eq(0).click(function(){
 		window.location="lenovo-xiaoxin.html";
@@ -257,11 +281,4 @@ $(function(){
 	$('#bigchange div').eq(2).click(function(){
 		window.location="lenovo-xianqingye.html";
 	});
-	//改进版滚轮事件
-	/*$(document).scroll(function(){
-		if($(document).scrollTop()>0){
-			console.log($(document).scrollTop());
-			move($('header'),{top:-100},500,"linear");
-		}
-	})*/
 })

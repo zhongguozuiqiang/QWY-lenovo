@@ -6,7 +6,25 @@ $(function(){
 		$('.nav_down script').attr('src','https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&cb=fn11');
 		$('.nav_down script').remove();
 	})
-	
+	var timer9;
+	window.onscroll=function(){
+		x=document.documentElement.scrollTop||document.body.scrollTop;
+		if(x>300){
+			$('#aside').css('display','block');
+		}else{
+			$('#aside').css('display','none');
+		}
+	}
+	$('#aside .notdiv').click(function(){
+		timer9=setInterval(function(){
+		x-=10;
+		window.scroll(0,x);
+		if(x<0){
+			clearInterval(timer9);
+		}
+		
+		},5)
+	})
 	//轮播效果
 	var timer1;
 	console.log($('.banner_img_view').css('left'));

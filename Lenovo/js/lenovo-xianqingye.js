@@ -13,7 +13,21 @@ $(function(){
 		$('.img_zhuan_2').css({transform:'rotate('+i+'deg)'});
 		$('.img_zhuan_3').css({transform:'rotate('+i+'deg)'});
 		$('.img_zhuan_4').css({transform:'rotate('+i+'deg)'});
+		$('.img_b').css({transform:'rotate('+i+'deg)'});
 	},10)
+	console.log($('#help_small span'));
+	console.log($('.box_k'));
+	$('#help_small span').each(function(i,elem){
+		$(elem).click(function(){
+			$('.box_k').css('display','none');
+			$('.box_k').eq(i).css('display','block');
+		})
+	})
+	$('.img_x').each(function(i,elem){
+		$(elem).click(function(){
+			$('.box_k').eq(i).css('display','none');
+		})
+	})
 	/*tab_move();
 	function tab_move(){
 		//初始

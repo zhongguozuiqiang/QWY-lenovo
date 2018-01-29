@@ -1,0 +1,71 @@
+*{
+	margin: 0; padding: 0;
+}
+/*导航*/
+#aside{
+	position: fixed;
+	top: 300px;
+	right: 30px;
+}
+#aside div:not(.notdiv){
+	width: 35px;
+	height: 35px;
+	border: 1px solid #ccc;
+	background: white;
+	cursor: pointer;
+}
+#aside img:not(.not){
+	vertical-align: middle;
+	margin-left: 4px;
+}
+#aside div:not(.notdiv):hover{
+	border: 1px solid black;
+}
+#aside .notdiv{
+	margin-top: 10px;
+	cursor: pointer;
+}
+#aside .not{
+	width: 37px;
+}
+#share-head{
+	width: 100%;
+	height: 46px;
+	background: #000;
+}
+#share-headdh{
+	line-height: 46px;
+	width: 1200px;
+	margin: 0 auto;
+	list-style: none;
+}
+#share-headdh li{
+	float: right;
+	font-size: 14px;
+	margin-left: 14px;
+}
+#share-headdh li a{
+	text-decoration: none;
+	color: navajowhite;
+}
+#share-headdh li a:hover{
+	color: orangered;
+}
+#share-headdh li span{
+	color: white;
+	margin-left: 7px;
+}
+#share-headdh img{
+	float: left;
+}
+/*content*/
+#content{
+	width: 100%;
+}
+#content img{
+	width: 100%;
+	margin-top: -10px;
+}
+ #content img:nth-of-type(1){
+ 	margin-top: 0;
+ }

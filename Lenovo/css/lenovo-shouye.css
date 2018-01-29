@@ -8,6 +8,34 @@ html{
 img{
 	cursor: pointer;
 }
+#aside{
+	position: fixed;
+	top: 300px;
+	right: 30px;
+}
+#aside div:not(.notdiv){
+	width: 35px;
+	height: 35px;
+	border: 1px solid #ccc;
+	background: white;
+	cursor: pointer;
+}
+#aside img:not(.not){
+	vertical-align: middle;
+	margin-left: 4px;
+}
+#aside div:not(.notdiv):hover{
+	border: 1px solid black;
+}
+#aside .notdiv{
+	margin-top: 10px;
+	cursor: pointer;
+}
+#aside .not{
+	width: 37px;
+}
+
+
 .banner{
 	position: relative;
 	top: 0;
@@ -48,6 +76,7 @@ img{
 	text-align: center;
 	top: 45%;
 	cursor: pointer;
+	display: none;
 }
 .banner .banner_sp2{
 	display: inline-block;
@@ -61,6 +90,7 @@ img{
 	text-align: center;
 	top: 45%;
 	cursor: pointer;
+	display: none;
 }
 
 
